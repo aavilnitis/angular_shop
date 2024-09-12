@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="store-archive">
+      <div class="product-card" *ngFor="let product of products">
+        <a [routerLink]="[product.id]">
+          <div class="product-card-image">
+            <img [src]="product.imageUrl" alt="{{ product.name }}">
+          </div>
+        </a>
+        
+        <div class="product-card-content">
+          <h3 class="padding-10-top">{{ product.name }}</h3>
+          <div class="add-to-cart padding-10-top">
+            <p>{{ product.price | currency }}</p>
+            <button (click)="addToCart(product)">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

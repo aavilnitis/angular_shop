@@ -1,0 +1,35 @@
+.header-container{
+    height: 100px;
+    background: var(--sita-green);
+    color: var(--off-white);
+    display: flex;
+    align-items: center;
+}
+
+.header{
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font: inherit;
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+@media screen and (max-width: 769px){
+    .header{
+        width: 100%;
+        padding: 0 20px;
+    }
+}

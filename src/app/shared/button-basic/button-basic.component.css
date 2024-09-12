@@ -1,0 +1,13 @@
+button.basic{
+    padding: 15px 20px;
+    border: 2px solid var(--sita-green);
+    border-radius: 2px;
+    font: inherit;
+    font-size: 0.8rem;
+}
+
+button.basic:hover{
+    background: var(--sita-green);
+    color: var(--off-white);
+    cursor: pointer;
+}

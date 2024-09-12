@@ -1,0 +1,12 @@
+.product-content{
+    display: flex;
+}
+
+.single-product-media{
+    width: 50%;
+}
+
+.single-product-details{
+    width: 50%;
+}
+

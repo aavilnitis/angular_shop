@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="single-product padding-10-top flex column" *ngIf="product">
+    <app-button-basic label="Back" [onClick]="goBack.bind(this)"></app-button-basic>
+    <div class="product-content padding-10-top">
+      <div class="single-product-media">
+        <app-product-media [product]="product"></app-product-media>
+      </div>
+      <div class="single-product-details">
+        <app-product-details [product]="product"></app-product-details>
+      </div>
+    </div>
+  </div>
+</div>

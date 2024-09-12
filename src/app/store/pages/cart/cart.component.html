@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="cart-page">
+    <h2 class="padding-40-top">Cart</h2>
+    <div class="cart-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th class="total-head">Total</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row" *ngFor="let product of cart | keyvalue">
+            <td class="product-cell">
+              <div class="product">
+                <img [src]="product.value.imageUrl" alt="product" />
+                <div>
+                  <p>{{ product.value.name }}</p>
+                  <small>{{ product.value.category }}</small>
+                </div>
+              </div>
+            </td>
+            <td class="price-cell">{{ product.value.price | currency }}</td>
+            <td class="quantity-cell">
+              <div class="quantity">
+                <button (click)="decreaseQuantity(product.value)">-</button>
+                <input type="text" [value]="product.value.quantity" />
+                <button (click)="increaseQuantity(product.value)">+</button>
+              </div>
+            </td>
+            <td class="total-head">{{ product.value.price * product.value.quantity | currency  }}</td>
+            <td class="remove-cell">
+              <button (click)="removeItem(product.value)">Remove</button>
+            </td>
+          </tr>
+        </tbody>
+        <div class="padding-10-top"></div>
+        <app-button-basic [label]="'Checkout'" [onClick]="goToCheckout.bind(this)"></app-button-basic>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+.cart-table {
+    width: 100%;
+}
+
+.cart-table table{
+    width: 100%;
+}
+
+th{
+    text-align: left;
+}
+
+tbody tr{
+    height: 100px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.total-head{
+    text-align: center;
+}
+
+.cart-table .product{
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.product-cell{
+    width: 40%;
+}
+
+.price-cell{
+    width: 10%;
+}
+
+.quantity-cell{
+    width: 20%;
+}
+
+.total-cell{
+    width: 10%;
+}
+
+.remove-cell{
+    width: 20%;
+    text-align: center;
+}
+
+
+.cart-table .product img{
+    height: 90px;
+}

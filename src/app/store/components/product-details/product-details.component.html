@@ -1,0 +1,19 @@
+<div class="product-details" *ngIf="product">
+  <h1>{{ product.name }}</h1>
+  <p class="padding-10-top">{{ product.description }}</p>
+
+  <p *ngIf="product.type !== 'variable'; else variableProduct" class="padding-10-top padding-10-bottom">
+    {{ product.price | currency }}
+  </p>
+
+  <ng-template #variableProduct>
+    <div class="padding-10-top"></div>
+    <select name="" id="" class="basic-select" [(ngModel)]="selectedVariationId">
+      <option value="">Select a variation</option>
+      <option *ngFor="let variation of product.variations" [value]="variation.id">{{variation.name}}</option>
+    </select>
+    <div class="padding-10-bottom"></div>
+  </ng-template>
+
+  <app-button-basic label="Add to cart" [onClick]="addToCart.bind(this, product)"></app-button-basic>
+</div>

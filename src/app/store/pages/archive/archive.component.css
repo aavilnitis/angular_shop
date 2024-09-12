@@ -1,0 +1,43 @@
+.store-archive{
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.product-card{
+    padding-bottom: 20px;
+}
+
+.product-card .product-card-content{
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.product-card .add-to-cart{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.product-card .add-to-cart button{
+    border: 1px solid #3c3c3c;
+    line-height: 1rem;
+    font-size: 1rem;
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+
+.product-card .add-to-cart button:hover{
+    background: var(--sita-green);
+    color: var(--off-white);
+    cursor: pointer;
+}
